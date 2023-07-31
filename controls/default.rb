@@ -1,6 +1,5 @@
-## Start of CIS Workbench Level 1 Checks ##
 # CIS Workbench Level 1 - Section 1
-control 'SCORED | 1.1.1.1 | PATCH' do
+control '1.1.1.1' do
   impact 1.0
   title 'Ensure mounting of cramfs filesystems is disabled and module is removed'
   describe command('sudo modprobe -n -v cramfs') do
@@ -11,7 +10,7 @@ control 'SCORED | 1.1.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.1.2 | PATCH' do
+control '1.1.1.2' do
   impact 1.0
   title 'Ensure mounting of hfs filesystems is disabled and module is removed'
   describe command('sudo modprobe -n -v hfs') do
@@ -22,7 +21,7 @@ control 'SCORED | 1.1.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.1.3 | PATCH' do
+control '1.1.1.3' do
   impact 1.0
   title 'Ensure mounting of hfsplus filesystems is disabled and module is removed'
   describe command('sudo modprobe -n -v hfsplus') do
@@ -33,7 +32,7 @@ control 'SCORED | 1.1.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.1.4 | PATCH' do
+control '1.1.1.4' do
   impact 1.0
   title 'Ensure mounting of squashfs filesystems is disabled and module is removed'
   describe command('sudo modprobe -n -v squashfs') do
@@ -44,7 +43,7 @@ control 'SCORED | 1.1.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.1.5 | PATCH' do
+control '1.1.1.5' do
   impact 1.0
   title 'Ensure mounting of udf filesystems is disabled and module is removed'
   describe command('sudo modprobe -n -v udf') do
@@ -55,7 +54,7 @@ control 'SCORED | 1.1.1.5 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.2 | PATCH' do
+control '1.1.2' do
   impact 1.0
   title 'Ensure separate partition exists for /tmp | enable and start/restart tmp.mount'
   describe command("sudo mount | grep -E '\s/tmp\s'") do
@@ -66,7 +65,7 @@ control 'SCORED | 1.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.3 | PATCH' do
+control '1.1.3' do
   impact 1.0
   title 'Ensure nodev option set on /tmp partition'
   describe command("sudo mount | grep -E '\s/tmp\s' | grep -v nodev") do
@@ -74,7 +73,7 @@ control 'SCORED | 1.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.4 | PATCH' do
+control '1.1.4' do
   impact 1.0
   title 'Ensure nosuid option set on /tmp partition'
   describe command("sudo mount | grep -E '\s/tmp\s' | grep -v nosuid") do
@@ -82,7 +81,7 @@ control 'SCORED | 1.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.5 | PATCH' do
+control '1.1.5' do
   impact 1.0
   title 'Ensure noexec option set on /tmp partition'
   describe command("sudo mount | grep -E '\s/tmp\s' | grep -v noexec") do
@@ -90,7 +89,7 @@ control 'SCORED | 1.1.5 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.6 | PATCH' do
+control '1.1.6' do
   impact 1.0
   title 'Ensure separate partition exists for /var'
   describe command("sudo mount | grep -E '\s/var\s'") do
@@ -99,7 +98,7 @@ control 'SCORED | 1.1.6 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.7 | PATCH' do
+control '1.1.7' do
   impact 1.0
   title 'Ensure separate partition exists for /var/tmp'
   describe command("sudo mount | grep /var/tmp") do
@@ -108,7 +107,7 @@ control 'SCORED | 1.1.7 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.8 | PATCH' do
+control '1.1.8' do
   impact 1.0
   title 'Ensure nodev option set on /var/tmp partition'
   describe command("sudo mount | grep -E '\s/var/tmp\s' | grep -v nodev") do
@@ -117,7 +116,7 @@ control 'SCORED | 1.1.8 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.9 | PATCH' do
+control '1.1.9' do
   impact 1.0
   title 'Ensure nosuid option set on /var/tmp partition'
   describe command("sudo mount | grep -E '\s/var/tmp\s' | grep -v nosuid") do
@@ -126,7 +125,7 @@ control 'SCORED | 1.1.9 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.10 | PATCH' do
+control '1.1.10' do
   impact 1.0
   title 'Ensure noexec option set on /var/tmp partition'
   describe command("sudo mount | grep -E '\s/var/tmp\s' | grep -v noexec") do
@@ -135,7 +134,7 @@ control 'SCORED | 1.1.10 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.11 | PATCH' do
+control '1.1.11' do
   impact 1.0
   title 'Ensure separate partition exists for /var/log'
   describe command("sudo mount | grep /var/log") do
@@ -144,7 +143,7 @@ control 'SCORED | 1.1.11 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.12 | PATCH' do
+control '1.1.12' do
   impact 1.0
   title 'Ensure separate partition exists for /var/log/audit'
   describe command("sudo mount | grep /var/log/audit") do
@@ -153,7 +152,7 @@ control 'SCORED | 1.1.12 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.13 | PATCH' do
+control '1.1.13' do
   impact 1.0
   title 'Ensure separate partition exists for /home'
   describe command("sudo mount | grep /home") do
@@ -162,7 +161,7 @@ control 'SCORED | 1.1.13 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.14 | PATCH' do
+control '1.1.14' do
   impact 1.0
   title 'Ensure nodev option set on /home partition'
   describe command("sudo mount | grep -E '\s/home\s' | grep -v nodev") do
@@ -171,7 +170,7 @@ control 'SCORED | 1.1.14 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.15 | PATCH' do
+control '1.1.15' do
   impact 1.0
   title 'Ensure nodev option set on /dev/shm partition'
   describe command("sudo mount | grep -E '\s/dev/shm\s' | grep -v nodev") do
@@ -179,7 +178,7 @@ control 'SCORED | 1.1.15 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.16 | PATCH' do
+control '1.1.16' do
   impact 1.0
   title 'Ensure nosuid option set on /dev/shm partition'
   describe command("sudo mount | grep -E '\s/dev/shm\s' | grep -v nosuid") do
@@ -187,7 +186,7 @@ control 'SCORED | 1.1.16 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.17 | PATCH' do
+control '1.1.17' do
   impact 1.0
   title 'Ensure noexec option set on /dev/shm partition'
   describe command("sudo mount | grep -E '\s/dev/shm\s' | grep -v noexec") do
@@ -195,7 +194,7 @@ control 'SCORED | 1.1.17 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.18 | PATCH' do
+control '1.1.18' do
   impact 1.0
   title 'Ensure sticky bit is set on all world-writable directories'
   describe command("sudo df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type d \( -perm -0002 -a ! -perm -1000 \) 2>/dev/null") do
@@ -203,15 +202,15 @@ control 'SCORED | 1.1.18 | PATCH' do
   end
 end
 
-control 'SCORED | 1.1.19 | PATCH' do
+control '1.1.19' do
   impact 1.0
   title 'Disable Automounting'
   describe systemd_service('autofs') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'NOTSCORED | 1.2.1 | PATCH' do
+control '1.2.1' do
   impact 1.0
   title 'Ensure package manager repositories are configured'
   describe command('sudo yum repolist') do
@@ -219,7 +218,7 @@ control 'NOTSCORED | 1.2.1 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.2.2 | PATCH' do
+control '1.2.2' do
   impact 1.0
   title 'Ensure GPG keys are configured'
   describe command('sudo grep ^gpgcheck /etc/yum.conf') do
@@ -227,7 +226,7 @@ control 'NOTSCORED | 1.2.2 | PATCH' do
   end
 end
 
-control 'SCORED | 1.2.3 | PATCH' do
+control '1.2.3' do
   impact 1.0
   title 'Ensure gpgcheck is globally activated'
   describe command("sudo grep ^gpgcheck /etc/yum.conf") do
@@ -239,7 +238,7 @@ control 'SCORED | 1.2.3 | PATCH' do
   end
 end
 
-control 'SCORED | 1.3.1 | PATCH' do
+control '1.3.1' do
   impact 1.0
   title 'Ensure AIDE is installed'
   describe.one do
@@ -252,7 +251,7 @@ control 'SCORED | 1.3.1 | PATCH' do
   end
 end
 
-control 'SCORED | 1.3.2 | PATCH' do
+control '1.3.2' do
   impact 1.0
   title 'Ensure filesystem integrity is regularly checked'
   describe crontab do
@@ -264,14 +263,14 @@ control 'SCORED | 1.3.2 | PATCH' do
     #its('months') { should cmp '*' }
     #its('user') { should include 'root' }
     #its('commands') { should include '/usr/sbin/aide --check' }
-    skip "Skipping as this control is not ready"
+    skip "Skipping as this control is  ready"
   end
   #describe command('sudo crontab -u root -l | grep aide') do
   #  its('stdout') { should match "0 5 * * * /usr/sbin/aide --check\n"  }
   #end
 end
 
-control 'SCORED | 1.4.1 | PATCH' do
+control '1.4.1' do
   impact 1.0
   title 'Ensure permissions on bootloader config are configured'
   describe file('/boot/grub2/grub.cfg') do
@@ -283,7 +282,7 @@ control 'SCORED | 1.4.1 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.4.2 | PATCH' do
+control '1.4.2' do
   impact 1.0
   title 'Ensure authentication required for single user mode '
   describe command('grep /sbin/sulogin /usr/lib/systemd/system/rescue.service') do
@@ -294,7 +293,7 @@ control 'NOTSCORED | 1.4.2 | PATCH' do
   end
 end
 
-control 'SCORED | 1.5.1 | PATCH' do
+control '1.5.1' do
   impact 1.0
   title 'Ensure core dumps are restricted'
   describe command('sudo sysctl fs.suid_dumpable') do
@@ -305,7 +304,7 @@ control 'SCORED | 1.5.1 | PATCH' do
   end
 end
 
-control 'SCORED | 1.5.2 | PATCH' do
+control '1.5.2' do
   impact 1.0
   title 'Ensure address space layout randomization (ASLR) is enabled'
   describe command('sudo sysctl kernel.randomize_va_space') do
@@ -313,27 +312,27 @@ control 'SCORED | 1.5.2 | PATCH' do
   end
 end
 
-control 'SCORED | 1.5.3 | PATCH' do
+control '1.5.3' do
   impact 1.0
   title 'Ensure prelink is disabled'
   describe.one do
     describe package('prelink') do
-      it { should_not be_installed }
+      it { should_ be_installed }
     end
     describe command('rpm -q prelink') do
-      its('stdout') { should match /package prelink is not installed/ }
+      its('stdout') { should match /package prelink is  installed/ }
     end
   end
 end
 
-control 'SCORED | 1.6.1.1 | PATCH' do
-  title 'Ensure SELinux is not disabled in bootloader configuration'
+control '1.6.1.1' do
+  title 'Ensure SELinux is  disabled in bootloader configuration'
   describe command("grep -E 'kernelopts=(\S+\s+)*(selinux=0|enforcing=0)+\b' /boot/grub2/grubenv") do
     its('stdout') { should eq('') }
   end
 end
 
-control 'SCORED | 1.6.1.2 | PATCH' do
+control '1.6.1.2' do
   title 'Ensure the SELinux state is enforcing'
   describe command("grep -E '^\s*SELINUX=enforcing' /etc/selinux/config") do
     #its('stdout') { should eq "SELINUX=enforcing" }
@@ -341,7 +340,7 @@ control 'SCORED | 1.6.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 1.6.1.3 | PATCH' do
+control '1.6.1.3' do
   title 'Ensure SELinux policy is configured'
   describe command("grep -E '^\s*SELINUXTYPE=(targeted|mls)\b' /etc/selinux/config") do
     #its('stdout') { should eq "SELINUXTYPE=targeted" }
@@ -349,28 +348,28 @@ control 'SCORED | 1.6.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 1.6.1.4 | PATCH' do
-  title 'Ensure SETroubleshoot is not installed'
+control '1.6.1.4' do
+  title 'Ensure SETroubleshoot is  installed'
   describe package('setroubleshoot') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
-control 'SCORED | 1.6.1.5 | PATCH' do
-  title 'Ensure the MCS Translation Service (mcstrans) is not installed'
+control '1.6.1.5' do
+  title 'Ensure the MCS Translation Service (mcstrans) is  installed'
   describe package('mcstrans') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
-control 'SCORED | 1.6.2 | PATCH' do
+control '1.6.2' do
   title 'Ensure SELinux is installed'
   describe package('libselinux') do
     it { should be_installed }
   end
 end
 
-control 'SCORED | 1.7.1.1 | PATCH' do
+control '1.7.1.1' do
   impact 1.0
   title 'Ensure message of the day is configured properly'
   describe command("grep -E -i '\\\v|\\\r|\\\m|\\\s|Amazon' /etc/motd") do
@@ -378,7 +377,7 @@ control 'SCORED | 1.7.1.1 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.7.1.2 | PATCH' do
+control '1.7.1.2' do
   impact 1.0
   title 'Ensure local login warning banner is configured properly'
   describe command("grep -E -i '(\\v|\\r|\\m|\\s|Amazon)' /etc/issue") do
@@ -386,7 +385,7 @@ control 'NOTSCORED | 1.7.1.2 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.7.1.3 | PATCH' do
+control '1.7.1.3' do
   impact 1.0
   title 'Ensure remote login warning banner is configured properly'
   describe command("grep -E -i '(\\v|\\r|\\m|\\s|Amazon)' /etc/issue.net") do
@@ -394,7 +393,7 @@ control 'NOTSCORED | 1.7.1.3 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.7.1.4 | PATCH' do
+control '1.7.1.4' do
   impact 1.0
   title 'Ensure permissions on /etc/motd are configured'
   describe file('/etc/motd') do
@@ -405,7 +404,7 @@ control 'NOTSCORED | 1.7.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 1.7.1.5 | PATCH' do
+control '1.7.1.5' do
   impact 1.0
   title 'Ensure permissions on /etc/issue are configured'
   describe file('/etc/issue') do
@@ -416,7 +415,7 @@ control 'SCORED | 1.7.1.5 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.7.1.6 | PATCH' do
+control '1.7.1.6' do
   impact 1.0
   title 'Ensure permissions on /etc/issue.net are configured'
   describe file('/etc/issue.net') do
@@ -427,7 +426,7 @@ control 'NOTSCORED | 1.7.1.6 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 1.8 | PATCH' do
+control '1.8' do
   impact 1.0
   title 'Ensure updates, patches, and additional security software are installed'
   describe command('sudo yum check-update --security') do
@@ -437,7 +436,7 @@ control 'NOTSCORED | 1.8 | PATCH' do
 end
 
 # CIS Workbench Level 1 - Section 2
-control 'NOTSCORED | 2.1.1.1 | PATCH' do
+control '2.1.1.1' do
   title 'Ensure time synchronization is in use - service install'
   describe.one do
     describe package('ntp') do
@@ -449,14 +448,14 @@ control 'NOTSCORED | 2.1.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 2.1.1.2 | PATCH' do
+control '2.1.1.2' do
   title 'Ensure ntp is configured | modify /etc/ntp.conf'
   describe ntp_conf do
-    #its('restrict') { should include '-4 default kod nomodify notrap nopeer noquery' }
-    #its('restrict') { should include '-6 default kod nomodify notrap nopeer noquery' }
+    #its('restrict') { should include '-4 default kod nomodify rap nopeer noquery' }
+    #its('restrict') { should include '-6 default kod nomodify rap nopeer noquery' }
     #its('restrict') { should include '127.0.0.1' }
     #its('restrict') { should include '::1' }
-    #its('server') { should_not eq nil }
+    #its('server') { should_ eq nil }
     #its('driftfile') { should eq '/var/lib/ntp/drift' }
     skip 'This check is skipped as chrony is being used for time synchronization'
   end
@@ -470,203 +469,203 @@ control 'SCORED | 2.1.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 2.1.1.3 | PATCH' do
+control '2.1.1.3' do
   title 'Ensure chrony is configured | modify /etc/sysconfig/chronyd'
   describe chrony_conf do
-    its('server') { should_not eq nil }
+    its('server') { should_ eq nil }
     its('logdir') { should cmp '/var/log/chrony' }
     its('log') { should cmp 'measurements statistics tracking' }
   end
 end
 
-control 'SCORED | 2.1.2 | PATCH' do
-  title 'Ensure X Window System is not installed'
+control '2.1.2' do
+  title 'Ensure X Window System is  installed'
   describe.one do
     describe package('xorg-x11*') do
-      it { should_not be_installed }
+      it { should_ be_installed }
     end
   end
 end
 
-control 'SCORED | 2.1.3 | PATCH' do
-  title 'Ensure Avahi Server is not enabled'
+control '2.1.3' do
+  title 'Ensure Avahi Server is  enabled'
   describe systemd_service('avahi-daemon') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.4 | PATCH' do
-  title 'Ensure CUPS is not enabled'
+control '2.1.4' do
+  title 'Ensure CUPS is  enabled'
   describe systemd_service('cups') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.5 | PATCH' do
-  title 'Ensure DHCP Server is not enabled'
+control '2.1.5' do
+  title 'Ensure DHCP Server is  enabled'
   describe systemd_service('dhcpd') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.6 | PATCH' do
-  title 'Ensure LDAP Server is not enabled'
+control '2.1.6' do
+  title 'Ensure LDAP Server is  enabled'
   describe systemd_service('slapd') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.7 | PATCH' do
-  title 'Ensure NFS and RPC are not enabled'
+control '2.1.7' do
+  title 'Ensure NFS and RPC are  enabled'
   describe systemd_service('nfs') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
   describe systemd_service('rpcbind') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.8 | PATCH' do
-  title 'Ensure DNS Server is not enabled'
+control '2.1.8' do
+  title 'Ensure DNS Server is  enabled'
   describe systemd_service('named') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.9 | PATCH' do
-  title 'Ensure FTP Server is not enabled'
+control '2.1.9' do
+  title 'Ensure FTP Server is  enabled'
   describe systemd_service('vsftpd') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.10 | PATCH' do
-  title 'Ensure HTTP server is not enabled'
+control '2.1.10' do
+  title 'Ensure HTTP server is  enabled'
   describe systemd_service('httpd') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.11 | PATCH' do
-  title 'Ensure IMAP and POP3 server is not enabled'
+control '2.1.11' do
+  title 'Ensure IMAP and POP3 server is  enabled'
   describe systemd_service('dovecot') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.12 | PATCH' do
-  title 'Ensure Samba is not enabled'
+control '2.1.12' do
+  title 'Ensure Samba is  enabled'
   describe systemd_service('smb') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.13 | PATCH' do
-  title 'Ensure HTTP Proxy Server is not enabled'
+control '2.1.13' do
+  title 'Ensure HTTP Proxy Server is  enabled'
   describe systemd_service('squid') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.14 | PATCH' do
-  title 'Ensure SNMP Server is not enabled'
+control '2.1.14' do
+  title 'Ensure SNMP Server is  enabled'
   describe systemd_service('snmpd') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.15 | PATCH' do
+control '2.1.15' do
   title 'Ensure mail transfer agent is configured for local-only mode'
   describe parse_config_file('/etc/postfix/main.cf') do
     its('inet_interfaces') { should eq 'localhost' }
   end
 end
 
-control 'SCORED | 2.1.16 | PATCH' do
-  title 'Ensure NIS Server is not enabled'
+control '2.1.16' do
+  title 'Ensure NIS Server is  enabled'
   describe systemd_service('ypserv') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.17 | PATCH' do
-  title 'Ensure rsh server is not enabled | rsh, rlogin, rexec'
+control '2.1.17' do
+  title 'Ensure rsh server is  enabled | rsh, rlogin, rexec'
   describe systemd_service('rsh.socket') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
   describe systemd_service('rlogin.socket') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
   describe systemd_service('rexec.socket') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.18 | PATCH' do
-  title 'Ensure telnet server is not enabled'
+control '2.1.18' do
+  title 'Ensure telnet server is  enabled'
   describe systemd_service('telnet') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.19 | PATCH' do
-  title 'Ensure tftp server is not enabled'
+control '2.1.19' do
+  title 'Ensure tftp server is  enabled'
   describe systemd_service('tftp') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.20 | PATCH' do
-  title 'Ensure rsync service is not enabled'
+control '2.1.20' do
+  title 'Ensure rsync service is  enabled'
   describe systemd_service('rsyncd') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.1.21 | PATCH' do
-  title 'Ensure talk server is not enabled'
+control '2.1.21' do
+  title 'Ensure talk server is  enabled'
   describe systemd_service('ntalk') do
-    it { should_not be_enabled }
+    it { should_ be_enabled }
   end
 end
 
-control 'SCORED | 2.2.1 | PATCH' do
-  title 'Ensure NIS Client is not installed'
+control '2.2.1' do
+  title 'Ensure NIS Client is  installed'
   describe package('ypbind') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
-control 'SCORED | 2.2.2 | PATCH' do
-  title 'Ensure rsh client is not installed'
+control '2.2.2' do
+  title 'Ensure rsh client is  installed'
   describe package('rsh') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
-control 'SCORED | 2.2.3 | PATCH' do
-  title 'Ensure talk client is not installed'
+control '2.2.3' do
+  title 'Ensure talk client is  installed'
   describe package('talk') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
-control 'SCORED | 2.2.4 | PATCH' do
-  title 'Ensure telnet client is not installed'
+control '2.2.4' do
+  title 'Ensure telnet client is  installed'
   describe package('telnet') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
-control 'SCORED | 2.2.5 | PATCH' do
-  title 'Ensure LDAP client is not installed'
+control '2.2.5' do
+  title 'Ensure LDAP client is  installed'
   describe package('openldap-clients') do
-    it { should_not be_installed }
+    it { should_ be_installed }
   end
 end
 
 # CIS Workbench Level 1 - Section 3
-control 'SCORED | 3.1.1 | PATCH' do
+control '3.1.1' do
   impact 1.0
   title 'Ensure IP forwarding is disabled'
   describe.one do
@@ -679,7 +678,7 @@ control 'SCORED | 3.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 3.1.2 | PATCH' do
+control '3.1.2' do
   impact 1.0
   title ' Ensure packet redirect sending is disabled'
   describe.one do
@@ -694,9 +693,9 @@ control 'SCORED | 3.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.1 | PATCH' do
+control '3.2.1' do
   impact 1.0
-  title 'Ensure source routed packets are not accepted'
+  title 'Ensure source routed packets are  accepted'
   describe kernel_parameter('net.ipv4.conf.all.accept_source_route') do
     its('value') { should eq 0 }
   end
@@ -711,9 +710,9 @@ control 'SCORED | 3.2.1 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.2 | PATCH' do
+control '3.2.2' do
   impact 1.0
-  title 'Ensure ICMP redirects are not accepted'
+  title 'Ensure ICMP redirects are  accepted'
   describe kernel_parameter('net.ipv4.conf.all.accept_redirects') do
     its('value') { should eq 0 }
   end
@@ -728,9 +727,9 @@ control 'SCORED | 3.2.2 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.3 | PATCH' do
+control '3.2.3' do
   impact 1.0
-  title 'Ensure secure ICMP redirects are not accepted'
+  title 'Ensure secure ICMP redirects are  accepted'
   describe kernel_parameter('net.ipv4.conf.all.secure_redirects') do
     its('value') { should eq 0 }
   end
@@ -739,7 +738,7 @@ control 'SCORED | 3.2.3 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.4 | PATCH' do
+control '3.2.4' do
   impact 1.0
   title 'Ensure suspicious packets are logged'
   describe kernel_parameter('net.ipv4.conf.all.log_martians') do
@@ -750,7 +749,7 @@ control 'SCORED | 3.2.4 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.5 | PATCH' do
+control '3.2.5' do
   impact 1.0
   title 'Ensure broadcast ICMP requests are ignored'
   describe kernel_parameter('net.ipv4.icmp_echo_ignore_broadcasts') do
@@ -758,7 +757,7 @@ control 'SCORED | 3.2.5 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.6 | PATCH' do
+control '3.2.6' do
   impact 1.0
   title 'Ensure bogus ICMP responses are ignored'
   describe kernel_parameter('net.ipv4.icmp_ignore_bogus_error_responses') do
@@ -766,7 +765,7 @@ control 'SCORED | 3.2.6 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.7 | PATCH' do
+control '3.2.7' do
   impact 1.0
   title 'Ensure Reverse Path Filtering is enabled'
   describe kernel_parameter('net.ipv4.conf.all.rp_filter') do
@@ -777,7 +776,7 @@ control 'SCORED | 3.2.7 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.8 | PATCH' do
+control '3.2.8' do
   impact 1.0
   title 'Ensure TCP SYN Cookies is enabled'
   describe kernel_parameter('net.ipv4.tcp_syncookies') do
@@ -785,9 +784,9 @@ control 'SCORED | 3.2.8 | PATCH' do
   end
 end
 
-control 'SCORED | 3.2.9 | PATCH' do
+control '3.2.9' do
   impact 1.0
-  title 'Ensure IPv6 router advertisements are not accepted'
+  title 'Ensure IPv6 router advertisements are  accepted'
   describe kernel_parameter('net.ipv6.conf.all.accept_ra') do
     its('value') { should eq 0 }
   end
@@ -796,28 +795,28 @@ control 'SCORED | 3.2.9 | PATCH' do
   end
 end
 
-control 'SCORED | 3.3.1 | PATCH' do
+control '3.3.1' do
   title 'Ensure TCP Wrappers is installed'
   describe package('tcp_wrappers') do
     it { should be_installed }
   end
 end
 
-control 'SCORED | 3.3.2 | PATCH' do
+control '3.3.2' do
   title 'Ensure /etc/hosts.allow is configured'
   describe command("grep '^ALL' /etc/hosts.allow") do
     its('stdout') { should match "ALL: 172.25.0.0/16, 172.16.0.0/12, 127.0.0.1/32" }
   end
 end
 
-control 'SCORED | 3.3.3 | PATCH' do
+control '3.3.3' do
   title 'Ensure /etc/hosts.deny is configured'
   describe file('/etc/hosts.deny') do
     its('content') { should match /ALL: ALL/ }
   end
 end
 
-control 'SCORED | 3.3.4 | PATCH' do
+control '3.3.4' do
   impact 1.0
   title 'Ensure permissions on /etc/hosts.allow are configured'
   describe.one do
@@ -836,7 +835,7 @@ control 'SCORED | 3.3.4 | PATCH' do
   end
 end
 
-control 'SCORED | 3.3.5 | PATCH' do
+control '3.3.5' do
   impact 1.0
   title 'Ensure permissions on /etc/hosts.deny are configured'
   describe.one do
@@ -855,7 +854,7 @@ control 'SCORED | 3.3.5 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 3.4.1 | PATCH' do
+control '3.4.1' do
   impact 1.0
   title 'Ensure DCCP is disabled'
   describe command('modprobe -n -v dccp') do
@@ -866,7 +865,7 @@ control 'NOTSCORED | 3.4.1 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 3.4.2 | PATCH' do
+control '3.4.2' do
   impact 1.0
   title 'Ensure SCTP is disabled'
   describe command('modprobe -n -v sctp') do
@@ -877,7 +876,7 @@ control 'NOTSCORED | 3.4.2 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 3.4.3 | PATCH' do
+control '3.4.3' do
   impact 1.0
   title 'Ensure RDS is disabled'
   describe command('modprobe -n -v rds') do
@@ -888,7 +887,7 @@ control 'NOTSCORED | 3.4.3 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 3.4.4 | PATCH' do
+control '3.4.4' do
   impact 1.0
   title 'Ensure TIPC is disabled'
   describe command('modprobe -n -v tipc') do
@@ -899,7 +898,7 @@ control 'NOTSCORED | 3.4.4 | PATCH' do
   end
 end
 
-control 'SCORED | 3.5.1.1 | PATCH' do
+control '3.5.1.1' do
   impact 1.0
   title 'Ensure default deny firewall policy'
   %w[INPUT OUTPUT FORWARD].each do |chain|
@@ -916,7 +915,7 @@ control 'SCORED | 3.5.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 3.5.1.2 | PATCH' do
+control '3.5.1.2' do
   impact 1.0
   title 'Ensure loopback traffic is configured'
   describe command('iptables -L INPUT -v -n') do
@@ -925,7 +924,7 @@ control 'SCORED | 3.5.1.2 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 3.5.1.3 | PATCH' do
+control '3.5.1.3' do
   impact 1.0
   title 'Ensure outbound and established connections are configured'
   describe command('iptables -L -v -n') do
@@ -934,7 +933,7 @@ control 'NOTSCORED | 3.5.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 3.5.1.4 | PATCH' do
+control '3.5.1.4' do
   impact 1.0
   title 'Ensure firewall rules exist for all open ports'
   port.where { protocol =~ /.*/ && port >= 0 && address =~ /^(?!127\.0\.0\.1|::1|::).*$/ }.entries.each do |entry|
@@ -948,7 +947,7 @@ control 'SCORED | 3.5.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 3.5.2.1 | PATCH' do
+control '3.5.2.1' do
   impact 1.0
   title 'Ensure IPv6 default deny firewall policy'
   describe command('iptables -L -v -n') do
@@ -957,7 +956,7 @@ control 'SCORED | 3.5.2.1 | PATCH' do
   end
 end
 
-control 'SCORED | 3.5.2.2 | PATCH' do
+control '3.5.2.2' do
   impact 1.0
   title 'Ensure IPv6 loopback traffic is configured'
   describe command('iptables -L -v -n') do
@@ -966,7 +965,7 @@ control 'SCORED | 3.5.2.2 | PATCH' do
   end
 end
 
-control 'SCORED | 3.5.3 | PATCH' do
+control '3.5.3' do
   title 'Ensure iptables is installed and started'
   describe package('iptables') do
     #it { should be_installed }
@@ -978,7 +977,7 @@ control 'SCORED | 3.5.3 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 3.6 | PATCH ' do
+control '3.6 ' do
   impact 1.0
   title 'Ensure IPv6 is disabled'
   describe.one do
@@ -990,7 +989,7 @@ control 'NOTSCORED | 3.6 | PATCH ' do
 end
 
 # CIS Workbench Level 1 - Section 4
-control 'NOTSCORED | 4.1.1.1 | PATCH' do
+control '4.1.1.1' do
   impact 1.0
   title 'Ensure audit log storage size is configured'
   describe auditd_conf do
@@ -999,7 +998,7 @@ control 'NOTSCORED | 4.1.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.1.2 | PATCH' do
+control '4.1.1.2' do
   impact 1.0
   title 'Ensure system is disabled when audit logs are full'
   describe auditd_conf do
@@ -1010,16 +1009,16 @@ control 'SCORED | 4.1.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.1.3 | PATCH' do
+control '4.1.1.3' do
   impact 1.0
-  title 'Ensure audit logs are not automatically deleted'
+  title 'Ensure audit logs are  automatically deleted'
   describe auditd_conf do
     #its('max_log_file_action') { should eq 'keep_logs' }
     skip "This control is set to false by default in ansible role"
   end
 end
 
-control 'SCORED | 4.1.2 | PATCH' do
+control '4.1.2' do
   title 'Ensure auditd service is enabled'
   describe service('auditd') do
     it { should be_enabled }
@@ -1027,7 +1026,7 @@ control 'SCORED | 4.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.3 | PATCH' do
+control '4.1.3' do
   impact 1.0
   title 'Ensure auditing for processes that start prior to auditd is enabled'
   describe command('grep "^\s*linux" /boot/grub2/grub.cfg') do
@@ -1036,7 +1035,7 @@ control 'SCORED | 4.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.4 | PATCH' do
+control '4.1.4' do
   impact 1.0
   title 'Ensure events that modify date and time information are collected'
   describe command('auditctl -l | grep time-change') do
@@ -1049,7 +1048,7 @@ control 'SCORED | 4.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.5 | PATCH' do
+control '4.1.5' do
   impact 1.0
   title 'Ensure events that modify user/group information are collected'
   describe command('auditctl -l | grep identity') do
@@ -1062,7 +1061,7 @@ control 'SCORED | 4.1.5 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.6 | PATCH' do
+control '4.1.6' do
   impact 1.0
   title "Ensure events that modify the system's network environment are collected"
   describe command('auditctl -l | grep system-locale') do
@@ -1077,7 +1076,7 @@ control 'SCORED | 4.1.6 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.7 | PATCH' do
+control '4.1.7' do
   impact 1.0
   title "Ensure events that modify the system's Mandatory Access Controls are collected"
   describe command('auditctl -l | grep MAC-policy') do
@@ -1087,7 +1086,7 @@ control 'SCORED | 4.1.7 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.8 | PATCH' do
+control '4.1.8' do
   impact 1.0
   title 'Ensure login and logout events are collected'
   describe command("auditctl -l | grep logins") do
@@ -1100,7 +1099,7 @@ control 'SCORED | 4.1.8 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.9 | PATCH' do
+control '4.1.9' do
   impact 1.0
   title 'Ensure session initiation information is collected'
   describe command("auditctl -l | grep -E '(session|logins)'") do
@@ -1111,7 +1110,7 @@ control 'SCORED | 4.1.9 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.10 | PATCH' do
+control '4.1.10' do
   impact 1.0
   title 'Ensure discretionary access control permission modification events are collected'
   describe command('auditctl -l | grep perm_mod') do
@@ -1125,7 +1124,7 @@ control 'SCORED | 4.1.10 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.11 | PATCH' do
+control '4.1.11' do
   impact 1.0
   title 'Ensure unsuccessful unauthorized file access attempts are collected'
   describe command('auditctl -l | grep access') do
@@ -1137,7 +1136,7 @@ control 'SCORED | 4.1.11 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.12 | PATCH' do
+control '4.1.12' do
   impact 1.0
   title 'Ensure use of privileged commands is collected'
   describe command('') do
@@ -1146,7 +1145,7 @@ control 'SCORED | 4.1.12 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.13 | PATCH' do
+control '4.1.13' do
   impact 1.0
   title 'Ensure successful file system mounts are collected'
   describe command('auditctl -l | grep mounts') do
@@ -1156,7 +1155,7 @@ control 'SCORED | 4.1.13 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.14 | PATCH' do
+control '4.1.14' do
   impact 1.0
   title 'Ensure file deletion events by users are collected'
   describe command('auditctl -l | grep delete') do
@@ -1166,7 +1165,7 @@ control 'SCORED | 4.1.14 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.15 | PATCH' do
+control '4.1.15' do
   impact 1.0
   title 'Ensure changes to system administration scope (sudoers) is collected'
   describe command('auditctl -l | grep scope') do
@@ -1176,7 +1175,7 @@ control 'SCORED | 4.1.15 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.16 | PATCH' do
+control '4.1.16' do
   impact 1.0
   title 'Ensure system administrator actions (sudolog) are collected'
   describe command('auditctl -l | grep actions') do
@@ -1185,7 +1184,7 @@ control 'SCORED | 4.1.16 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.17 | PATCH' do
+control '4.1.17' do
   impact 1.0
   title 'Ensure kernel module loading and unloading is collected'
   describe command('auditctl -l | grep modules') do
@@ -1198,7 +1197,7 @@ control 'SCORED | 4.1.17 | PATCH' do
   end
 end
 
-control 'SCORED | 4.1.18 | PATCH' do
+control '4.1.18' do
   impact 1.0
   title 'Ensure the audit configuration is immutable'
   describe command("grep '^\s*[^#]' /etc/audit/rules.d/*.rules | tail -1") do
@@ -1207,7 +1206,7 @@ control 'SCORED | 4.1.18 | PATCH' do
   end
 end
 
-control 'SCORED | 4.2.1.1 | PATCH' do
+control '4.2.1.1' do
   title 'Ensure rsyslog Service is enabled'
   describe service('rsyslog') do
     it { should be_enabled }
@@ -1215,7 +1214,7 @@ control 'SCORED | 4.2.1.1 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 4.2.1.2 | PATCH' do
+control '4.2.1.2' do
   impact 1.0
   title 'Ensure logging is configured'
   describe command('ls -l /var/log/') do
@@ -1224,7 +1223,7 @@ control 'NOTSCORED | 4.2.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 4.2.1.3 | PATCH' do
+control '4.2.1.3' do
   impact 1.0
   title 'Ensure rsyslog default file permissions configured'
   describe.one do
@@ -1237,7 +1236,7 @@ control 'SCORED | 4.2.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 4.2.1.4 | PATCH' do
+control '4.2.1.4' do
   impact 1.0
   title 'Ensure rsyslog is configured to send logs to a remote log host'
   describe command('grep "^*.*[^I][^I]*@" /etc/rsyslog.conf') do
@@ -1246,27 +1245,27 @@ control 'SCORED | 4.2.1.4 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 4.2.1.5 | PATCH' do
+control '4.2.1.5' do
   impact 1.0
   title 'Ensure remote rsyslog messages are only accepted on designated log hosts.'
   describe parse_config_file('/etc/rsyslog.conf') do
-    its('$ModLoad') { should_not cmp 'imtcp' }
+    its('$ModLoad') { should_ cmp 'imtcp' }
   end
   describe parse_config_file('/etc/rsyslog.conf') do
-    its('$InputTCPServerRun') { should_not cmp '514' }
+    its('$InputTCPServerRun') { should_ cmp '514' }
   end
 end
 
-control 'SCORED | 4.2.2.1 | PATCH' do
+control '4.2.2.1' do
   impact 1.0
   title 'Ensure syslog-ng service is enabled'
   describe systemd_service('syslog-ng') do
     #it { should be_enabled }
-    skip "Package syslog-ng is not used, hence skipping this test."
+    skip "Package syslog-ng is  used, hence skipping this test."
   end
 end
 
-control 'NOTSCORED | 4.2.2.2 | PATCH' do
+control '4.2.2.2' do
   impact 1.0
   title 'Ensure logging is configured'
   describe command('ls -l /var/log/') do
@@ -1275,7 +1274,7 @@ control 'NOTSCORED | 4.2.2.2 | PATCH' do
   end
 end
 
-control 'SCORED | 4.2.2.3 | PATCH' do
+control '4.2.2.3' do
   impact 1.0
   title 'Ensure syslog-ng default file permissions configured'
   describe command('ls -l /var/log/') do
@@ -1284,7 +1283,7 @@ control 'SCORED | 4.2.2.3 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 4.2.2.4 | PATCH' do
+control '4.2.2.4' do
   impact 1.0
   title 'Ensure syslog-ng is configured to send logs to a remote log host'
   describe command('ls -l /var/log/') do
@@ -1293,7 +1292,7 @@ control 'NOTSCORED | 4.2.2.4 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 4.2.2.5 | PATCH' do
+control '4.2.2.5' do
   impact 1.0
   title 'Ensure remote syslog-ng messages are only accepted on designated log hosts'
   describe command('ls -l /var/log/') do
@@ -1302,7 +1301,7 @@ control 'NOTSCORED | 4.2.2.5 | PATCH' do
   end
 end
 
-control 'SCORED | 4.2.3 | PATCH' do
+control '4.2.3' do
   impact 1.0
   title 'Ensure rsyslog or syslog-ng is installed'
   describe.one do
@@ -1315,7 +1314,7 @@ control 'SCORED | 4.2.3 | PATCH' do
   end
 end
 
-control 'SCORED | 4.2.4 | PATCH' do
+control '4.2.4' do
   impact 1.0
   title 'Ensure permissions on all logfiles are configured'
   describe.one do
@@ -1324,17 +1323,17 @@ control 'SCORED | 4.2.4 | PATCH' do
     end
     command('find /var/log -type f').stdout.split("\n").each do |log_file|
       describe file(log_file) do
-        it { should_not be_writable.by('group') }
-        it { should_not be_executable.by('group') }
-        it { should_not be_readable.by('other') }
-        it { should_not be_writable.by('other') }
-        it { should_not be_executable.by('other') }
+        it { should_ be_writable.by('group') }
+        it { should_ be_executable.by('group') }
+        it { should_ be_readable.by('other') }
+        it { should_ be_writable.by('other') }
+        it { should_ be_executable.by('other') }
       end
     end
   end
 end
 
-control 'NOTSCORED | 4.3 | PATCH' do
+control '4.3' do
   impact 1.0
   title 'Ensure logrotate is configured'
   describe command('') do
@@ -1344,7 +1343,7 @@ control 'NOTSCORED | 4.3 | PATCH' do
 end
 
 # CIS Workbench Level 1 - Section 5
-control 'SCORED | 5.1.1 | PATCH' do
+control '5.1.1' do
   impact 1.0
   title 'Ensure cron daemon is enabled'
   describe systemd_service('crond') do
@@ -1352,7 +1351,7 @@ control 'SCORED | 5.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.2 | PATCH' do
+control '5.1.2' do
   impact 1.0
   title 'Ensure permissions on /etc/crontab are configured'
   describe file('/etc/crontab') do
@@ -1364,7 +1363,7 @@ control 'SCORED | 5.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.3 | PATCH' do
+control '5.1.3' do
   impact 1.0
   title 'Ensure permissions on /etc/cron.hourly are configured'
   describe file('/etc/cron.hourly') do
@@ -1376,7 +1375,7 @@ control 'SCORED | 5.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.4 | PATCH' do
+control '5.1.4' do
   impact 1.0
   title 'Ensure permissions on /etc/cron.daily are configured'
   describe file('/etc/cron.daily') do
@@ -1388,7 +1387,7 @@ control 'SCORED | 5.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.5 | PATCH' do
+control '5.1.5' do
   impact 1.0
   title 'Ensure permissions on /etc/cron.weekly are configured'
   describe file('/etc/cron.weekly') do
@@ -1400,7 +1399,7 @@ control 'SCORED | 5.1.5 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.6 | PATCH' do
+control '5.1.6' do
   impact 1.0
   title 'Ensure permissions on /etc/cron.monthly are configured'
   describe file('/etc/cron.monthly') do
@@ -1412,7 +1411,7 @@ control 'SCORED | 5.1.6 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.7 | PATCH' do
+control '5.1.7' do
   impact 1.0
   title 'Ensure permissions on /etc/cron.d are configured'
   describe file('/etc/cron.d') do
@@ -1424,11 +1423,11 @@ control 'SCORED | 5.1.7 | PATCH' do
   end
 end
 
-control 'SCORED | 5.1.8 | PATCH' do
+control '5.1.8' do
   impact 1.0
   title 'Ensure at/cron is restricted to authorized users'
   describe file('/etc/at.deny') do
-    it { should_not exist }
+    it { should_ exist }
   end
   describe file('/etc/at.allow') do
     it { should exist }
@@ -1438,7 +1437,7 @@ control 'SCORED | 5.1.8 | PATCH' do
     it { should be_grouped_into 'root' }
   end
   describe file('/etc/cron.deny') do
-    it { should_not exist }
+    it { should_ exist }
   end
   describe file('/etc/cron.allow') do
     it { should exist }
@@ -1449,7 +1448,7 @@ control 'SCORED | 5.1.8 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.1 | PATCH' do
+control '5.2.1' do
   impact 1.0
   title 'Ensure permissions on /etc/ssh/sshd_config are configured'
   describe file('/etc/ssh/sshd_config') do
@@ -1461,7 +1460,7 @@ control 'SCORED | 5.2.1 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.4 | PATCH' do
+control '5.2.4' do
   impact 1.0
   title 'Ensure SSH Protocol is set to 2'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1469,7 +1468,7 @@ control 'SCORED | 5.2.4 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.5 | PATCH' do
+control '5.2.5' do
   impact 1.0
   title 'Ensure SSH LogLevel is set to INFO'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1477,7 +1476,7 @@ control 'SCORED | 5.2.5 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.6 | PATCH' do
+control '5.2.6' do
   impact 1.0
   title 'Ensure SSH X11 forwarding is disabled'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1486,7 +1485,7 @@ control 'SCORED | 5.2.6 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.7 | PATCH' do
+control '5.2.7' do
   impact 1.0
   title 'Ensure SSH MaxAuthTries is set to 4 or less'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1494,7 +1493,7 @@ control 'SCORED | 5.2.7 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.8 | PATCH' do
+control '5.2.8' do
   impact 1.0
   title 'Ensure SSH IgnoreRhosts is enabled'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1502,7 +1501,7 @@ control 'SCORED | 5.2.8 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.9 | PATCH' do
+control '5.2.9' do
   impact 1.0
   title 'Ensure SSH HostbasedAuthentication is disabled'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1510,7 +1509,7 @@ control 'SCORED | 5.2.9 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.10 | PATCH' do
+control '5.2.10' do
   impact 1.0
   title 'Ensure SSH root login is disabled'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1518,7 +1517,7 @@ control 'SCORED | 5.2.10 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.11 | PATCH' do
+control '5.2.11' do
   impact 1.0
   title 'Ensure SSH PermitEmptyPasswords is disabled'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1526,7 +1525,7 @@ control 'SCORED | 5.2.11 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.12 | PATCH' do
+control '5.2.12' do
   impact 1.0
   title 'Ensure SSH PermitUserEnvironment is disabled'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1534,7 +1533,7 @@ control 'SCORED | 5.2.12 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.13 | PATCH' do
+control '5.2.13' do
   impact 1.0
   title 'Ensure only approved ciphers are used'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1542,7 +1541,7 @@ control 'SCORED | 5.2.13 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.14 | PATCH' do
+control '5.2.14' do
   impact 1.0
   title 'Ensure only approved MAC algorithms are used'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1550,7 +1549,7 @@ control 'SCORED | 5.2.14 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.15 | PATCH' do
+control '5.2.15' do
   impact 1.0
   title 'Ensure that strong Key Exchange algorithms are used'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1558,7 +1557,7 @@ control 'SCORED | 5.2.15 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.15a | PATCH' do
+control '5.2.15a' do
   impact 1.0
   title 'Ensure that strong Host Key Exchange algorithms are used'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1566,7 +1565,7 @@ control 'SCORED | 5.2.15a | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.16 | PATCH' do
+control '5.2.16' do
   impact 1.0
   title 'Ensure SSH Idle Timeout Interval is configured'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1575,7 +1574,7 @@ control 'SCORED | 5.2.16 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.17 | PATCH' do
+control '5.2.17' do
   impact 1.0
   title 'Ensure SSH LoginGraceTime is set to one minute or less'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1583,7 +1582,7 @@ control 'SCORED | 5.2.17 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.18 | PATCH' do
+control '5.2.18' do
   impact 1.0
   title 'Ensure SSH access is limited - allowusers, allowgroups, denyusers, denygroups'
   describe sshd_config do
@@ -1594,7 +1593,7 @@ control 'SCORED | 5.2.18 | PATCH' do
   end
 end
 
-control 'SCORED | 5.2.19 | PATCH' do
+control '5.2.19' do
   impact 1.0
   title 'Ensure SSH warning banner is configured'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1602,7 +1601,7 @@ control 'SCORED | 5.2.19 | PATCH' do
   end
 end
 
-control 'SCORED | 5.3.1 | PATCH' do
+control '5.3.1' do
   impact 1.0
   title 'Ensure password creation requirements are configured'
   describe parse_config_file('/etc/security/pwquality.conf') do
@@ -1614,7 +1613,7 @@ control 'SCORED | 5.3.1 | PATCH' do
   end
 end
 
-control 'SCORED | 5.3.2 & 5.3.3 | PATCH' do
+control '5.3.2 & 5.3.3' do
   impact 1.0
   title 'Ensure lockout for failed password attempts is configured and password reuse is limited'
   describe sshd_config('/etc/ssh/sshd_config') do
@@ -1623,7 +1622,7 @@ control 'SCORED | 5.3.2 & 5.3.3 | PATCH' do
   end
 end
 
-control 'SCORED | 5.3.4 | PATCH' do
+control '5.3.4' do
   impact 1.0
   title 'Ensure password hashing algorithm is SHA-512'
   describe command("authconfig --test | grep 'password hashing algorithm is' | awk '{print $NF}'") do
@@ -1631,7 +1630,7 @@ control 'SCORED | 5.3.4 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.1.1 | PATCH' do
+control '5.4.1.1' do
   impact 1.0
   title 'Ensure password expiration is 90 days or less'
   describe login_defs do
@@ -1639,7 +1638,7 @@ control 'SCORED | 5.4.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.1.2 | PATCH' do
+control '5.4.1.2' do
   impact 1.0
   title 'Ensure minimum days between password changes is 7 or more'
   describe login_defs do
@@ -1647,7 +1646,7 @@ control 'SCORED | 5.4.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.1.3 | PATCH' do
+control '5.4.1.3' do
   impact 1.0
   title 'Ensure password expiration warning days is 7 or more'
   describe login_defs do
@@ -1655,7 +1654,7 @@ control 'SCORED | 5.4.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.1.4 | PATCH' do
+control '5.4.1.4' do
   impact 1.0
   title 'Ensure inactive password lock is 30 days or less'
   describe command("useradd -D | grep INACTIVE") do
@@ -1664,18 +1663,18 @@ control 'SCORED | 5.4.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.2 | PATCH' do
+control '5.4.2' do
   impact 1.0
   title 'Ensure system accounts are non-login'
   describe passwd.where { user =~ /^(?!root|sync|shutdown|halt).*$/ } do
-    its("entries") { should_not be_empty }
+    its("entries") { should_ be_empty }
   end
   describe passwd.where { user =~ /^(?!root|sync|shutdown|halt).*$/ && uid.to_i < 1000 && shell != "/sbin/nologin" } do
     its("entries") { should be_empty }
   end
 end
 
-control 'SCORED | 5.4.3 | PATCH' do
+control '5.4.3' do
   impact 1.0
   title 'Ensure default group for the root account is GID 0'
   describe group('root') do
@@ -1684,7 +1683,7 @@ control 'SCORED | 5.4.3 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.4 | PATCH' do
+control '5.4.4' do
   impact 1.0
   title 'Ensure default user umask is 027 or more restrictive'
   describe.one do
@@ -1700,7 +1699,7 @@ control 'SCORED | 5.4.4 | PATCH' do
   end
 end
 
-control 'SCORED | 5.4.5 | PATCH' do
+control '5.4.5' do
   impact 1.0
   title 'Ensure default user shell timeout is 900 seconds or less'
   describe.one do
@@ -1715,7 +1714,7 @@ control 'SCORED | 5.4.5 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 5.5 | PATCH' do
+control '5.5' do
   impact 1.0
   title 'Ensure root login is restricted to system console'
   describe group('root') do
@@ -1724,7 +1723,7 @@ control 'NOTSCORED | 5.5 | PATCH' do
   end
 end
 
-control 'SCORED | 5.6 | PATCH' do
+control '5.6' do
   impact 1.0
   title 'Ensure access to the su command is restricted and wheel group contains root'
   describe file('/etc/pam.d/su') do
@@ -1736,7 +1735,7 @@ control 'SCORED | 5.6 | PATCH' do
 end
 
 # CIS Workbench Level 1 - Section 6
-control 'NOTSCORED | 6.1.1 | PATCH' do
+control '6.1.1' do
   impact 1.0
   title 'Audit system file permissions'
   describe command("rpm -qf /bin/bash") do
@@ -1745,7 +1744,7 @@ control 'NOTSCORED | 6.1.1 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.2 | PATCH' do
+control '6.1.2' do
   impact 1.0
   title 'Ensure permissions on /etc/passwd are configured'
   describe file('/etc/passwd') do
@@ -1753,13 +1752,13 @@ control 'SCORED | 6.1.2 | PATCH' do
     it { should be_file }
     it { should be_owned_by 'root' }
     it { should be_grouped_into 'root' }
-    it { should_not be_executable.by "group" }
+    it { should_ be_executable.by "group" }
     it { should be_readable.by "group" }
-    it { should_not be_writable.by "group" }
-    it { should_not be_executable.by "other" }
+    it { should_ be_writable.by "group" }
+    it { should_ be_executable.by "other" }
     it { should be_readable.by "other" }
-    it { should_not be_writable.by "other" }
-    it { should_not be_executable.by "owner" }
+    it { should_ be_writable.by "other" }
+    it { should_ be_executable.by "owner" }
     it { should be_readable.by "owner" }
     it { should be_writable.by "owner" }
     its("uid") { should cmp 0 }
@@ -1768,7 +1767,7 @@ control 'SCORED | 6.1.2 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.3 | PATCH' do
+control '6.1.3' do
   impact 1.0
   title 'Ensure permissions on /etc/shadow are configured'
   describe file('/etc/shadow') do
@@ -1780,7 +1779,7 @@ control 'SCORED | 6.1.3 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.4 | PATCH' do
+control '6.1.4' do
   impact 1.0
   title 'Ensure permissions on /etc/group are configured'
   describe file('/etc/group') do
@@ -1792,7 +1791,7 @@ control 'SCORED | 6.1.4 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.5 | PATCH' do
+control '6.1.5' do
   impact 1.0
   title 'Ensure permissions on /etc/gshadow are configured'
   describe file('/etc/gshadow') do
@@ -1804,7 +1803,7 @@ control 'SCORED | 6.1.5 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.6 | PATCH' do
+control '6.1.6' do
   impact 1.0
   title 'Ensure permissions on /etc/passwd- are configured'
   describe file('/etc/passwd-') do
@@ -1816,7 +1815,7 @@ control 'SCORED | 6.1.6 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.7 | PATCH' do
+control '6.1.7' do
   impact 1.0
   title 'Ensure permissions on /etc/shadow- are configured'
   describe file('/etc/shadow-') do
@@ -1828,7 +1827,7 @@ control 'SCORED | 6.1.7 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.8 | PATCH' do
+control '6.1.8' do
   impact 1.0
   title 'Ensure permissions on /etc/group- are configured'
   describe file('/etc/group-') do
@@ -1840,7 +1839,7 @@ control 'SCORED | 6.1.8 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.9 | PATCH' do
+control '6.1.9' do
   impact 1.0
   title 'Ensure permissions on /etc/gshadow- are configured'
   describe file('/etc/gshadow-') do
@@ -1852,7 +1851,7 @@ control 'SCORED | 6.1.9 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.10 | PATCH' do
+control '6.1.10' do
   impact 1.0
   title 'Ensure no world writable files exist'
   describe command("df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -0002") do
@@ -1860,7 +1859,7 @@ control 'SCORED | 6.1.10 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.11 | PATCH' do
+control '6.1.11' do
   impact 1.0
   title 'Ensure no unowned files or directories exist'
   describe command("df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -nouser") do
@@ -1868,7 +1867,7 @@ control 'SCORED | 6.1.11 | PATCH' do
   end
 end
 
-control 'SCORED | 6.1.12 | PATCH' do
+control '6.1.12' do
   impact 1.0
   title 'Ensure no ungrouped files or directories exist'
   describe command("df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -nogroup") do
@@ -1876,7 +1875,7 @@ control 'SCORED | 6.1.12 | PATCH' do
   end
 end
 
-control 'NOTSCORED | 6.1.13 | PATCH' do
+control '6.1.13' do
   impact 1.0
   title 'Audit SUID executables'
   describe command("df --local -P | awk '{if (NR!=1) print $6}' | xargs -I '{}' find '{}' -xdev -type f -perm -4000") do
@@ -1885,17 +1884,17 @@ control 'NOTSCORED | 6.1.13 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.1 | PATCH' do
+control '6.2.1' do
   impact 1.0
-  title 'Ensure password fields are not empty'
+  title 'Ensure password fields are  empty'
   shadow.users(/.+/).entries.each do |entry|
     describe entry do
-      its('password') { should_not eq [''] }
+      its('password') { should_ eq [''] }
     end
   end
 end
 
-control 'SCORED | 6.2.2 | PATCH' do
+control '6.2.2' do
   impact 1.0
   title "Ensure no legacy '+' entries exist in /etc/passwd"
   describe command("grep '^\+:' /etc/passwd") do
@@ -1903,7 +1902,7 @@ control 'SCORED | 6.2.2 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.3 | PATCH' do
+control '6.2.3' do
   impact 1.0
   title "Ensure no legacy '+' entries exist in /etc/shadow"
   describe command("grep '^\+:' /etc/shadow") do
@@ -1911,7 +1910,7 @@ control 'SCORED | 6.2.3 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.4 | PATCH' do
+control '6.2.4' do
   impact 1.0
   title "Ensure no legacy '+' entries exist in /etc/group"
   describe command("grep '^\+:' /etc/group") do
@@ -1919,7 +1918,7 @@ control 'SCORED | 6.2.4 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.5 | PATCH' do
+control '6.2.5' do
   impact 1.0
   title "Ensure root is the only UID 0 account"
   describe command("awk -F: '($3 == 0) { print $1 }' /etc/passwd") do
@@ -1927,7 +1926,7 @@ control 'SCORED | 6.2.5 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.6 | PATCH' do
+control '6.2.6' do
   impact 1.0
   title "Ensure root PATH Integrity"
   describe command('sh .files/scripts/6.2.6_check_root_path_integrity.sh') do
@@ -1935,7 +1934,7 @@ control 'SCORED | 6.2.6 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.7 | PATCH' do
+control '6.2.7' do
   impact 1.0
   title "Ensure all user's home directories exist"
   describe command('sh .files/scripts/6.2.7_check_users_home_dir_exists.sh') do
@@ -1943,7 +1942,7 @@ control 'SCORED | 6.2.7 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.8 | PATCH' do
+control '6.2.8' do
   impact 1.0
   title "Ensure user's home directories permissions are 750 or more restrictive"
   describe command('sh .files/scripts/6.2.8_check_home_dir_permissions.sh') do
@@ -1951,7 +1950,7 @@ control 'SCORED | 6.2.8 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.9 | PATCH' do
+control '6.2.9' do
   impact 1.0
   title 'Ensure users own their home directories'
   describe command('sh .files/scripts/6.2.9_check_user_own_their_home_dir.sh') do
@@ -1959,15 +1958,15 @@ control 'SCORED | 6.2.9 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.10 | PATCH' do
+control '6.2.10' do
   impact 1.0
-  title "Ensure user's dot files are not group or world writable"
+  title "Ensure user's dot files are  group or world writable"
   describe command('sh .files/scripts/6.2.10_check_dot.sh') do
     its('stdout') { should match "" }
   end
 end
 
-control 'SCORED | 6.2.11 | PATCH' do
+control '6.2.11' do
   impact 1.0
   title 'Ensure no users have .forward files'
   describe command('sh .files/scripts/6.2.11_check_forward.sh') do
@@ -1975,7 +1974,7 @@ control 'SCORED | 6.2.11 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.12 | PATCH' do
+control '6.2.12' do
   impact 1.0
   title 'Ensure no users have .netrc files'
   describe command('sh .files/scripts/6.2.12_check_netrc.sh') do
@@ -1983,7 +1982,7 @@ control 'SCORED | 6.2.12 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.14 | PATCH' do
+control '6.2.14' do
   impact 1.0
   title 'Ensure no users have .rhosts files'
   describe command('sh .files/scripts/6.2.14_check_rhosts.sh') do
@@ -1991,7 +1990,7 @@ control 'SCORED | 6.2.14 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.15 | PATCH' do
+control '6.2.15' do
   impact 1.0
   title 'Ensure all groups in /etc/passwd exist in /etc/group'
   describe command('sh .files/scripts/6.2.15_check_all_groups.sh') do
@@ -1999,7 +1998,7 @@ control 'SCORED | 6.2.15 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.16 | PATCH' do
+control '6.2.16' do
   impact 1.0
   title 'Ensure no duplicate UIDs exist'
   describe command('sh .files/scripts/6.2.16_check_duplicate_uids.sh') do
@@ -2007,7 +2006,7 @@ control 'SCORED | 6.2.16 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.17 | PATCH' do
+control '6.2.17' do
   impact 1.0
   title 'Ensure no duplicate GIDs exist'
   describe command('sh .files/scripts/6.2.17_check_duplicate_gids.sh') do
@@ -2015,7 +2014,7 @@ control 'SCORED | 6.2.17 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.18 | PATCH' do
+control '6.2.18' do
   impact 1.0
   title 'Ensure no duplicate user names exist'
   describe command('sh .files/scripts/6.2.18_check_duplicate_user_names.sh') do
@@ -2023,7 +2022,7 @@ control 'SCORED | 6.2.18 | PATCH' do
   end
 end
 
-control 'SCORED | 6.2.19 | PATCH' do
+control '6.2.19' do
   impact 1.0
   title 'Ensure no duplicate group names exist'
   describe command('sh .files/scripts/6.2.19_check_duplicate_groups.sh') do
